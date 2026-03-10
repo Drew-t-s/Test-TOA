@@ -39,7 +39,7 @@ COL_ARI_COMPLETE = "ARI complete"
 print("Using template:", TEMPLATE_FILE)
 
 if not os.path.exists(TEMPLATE_FILE):
-    raise FileNotFoundError("❌ Template not found — fix TEMPLATE_FILE path")
+    raise FileNotFoundError("Template not found — fix TEMPLATE_FILE path")
 
 
 # =========================================================
@@ -227,7 +227,7 @@ for row in sheet.rows:
     # Mark complete
     set_checkbox_true(ss, SHEET_ID, row.id, col_map[COL_ARI_COMPLETE])
 
-    print("✅ Uploaded + marked complete:", out_name)
+    print("Uploaded + marked complete:", out_name)
     processed += 1
 
 
@@ -235,6 +235,7 @@ print("\n--- Summary ---")
 print("Processed:", processed)
 print("Skipped (already complete):", skipped)
 print("--- Done ---\n")
+
 
 
 
