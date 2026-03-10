@@ -10,7 +10,7 @@ from datetime import datetime
 # CONFIG  (ONLY EDIT THESE)
 # =========================================================
 
-SMARTSHEET_TOKEN = os.environ["q8HcuSO7SEn9NBETfyOse1D7juDKdOvcPI47q"] 
+SMARTSHEET_TOKEN = os.environ["SMARTSHEET_TOKEN"] 
 SHEET_ID = 6053038855769988
 
 TEMPLATE_FILE = r"C:\Users\Frost\OneDrive\Desktop\SmartsheetsScripts\Transfer of Assets Form testing 13.pdf"
@@ -234,4 +234,5 @@ print("\n--- Summary ---")
 print("Processed:", processed)
 print("Skipped (already complete):", skipped)
 print("--- Done ---\n")
+
 
