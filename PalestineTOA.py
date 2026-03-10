@@ -10,7 +10,7 @@ from datetime import datetime
 # CONFIG  (ONLY EDIT THESE)
 # =========================================================
 
-SMARTSHEET_TOKEN = os.environ["SMARTSHEET_TOKEN"] 
+SMARTSHEET_TOKEN = os.environ["SMARTSHEET_TOKEN"]
 SHEET_ID = 6053038855769988
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -235,6 +235,7 @@ print("\n--- Summary ---")
 print("Processed:", processed)
 print("Skipped (already complete):", skipped)
 print("--- Done ---\n")
+
 
 
 
