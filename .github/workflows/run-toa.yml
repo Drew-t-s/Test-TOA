@@ -2,6 +2,8 @@ name: Run Palestine TOA
 
 on:
   workflow_dispatch:
+  repository_dispatch:
+    types: [smartsheet_changed]
 
 jobs:
   run-script:
@@ -19,19 +21,6 @@ jobs:
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
-
-      - name: Debug token presence
-        shell: pwsh
-        env:
-          SMARTSHEET_TOKEN: ${{ secrets.SMARTSHEET_TOKEN }}
-        run: |
-          if ([string]::IsNullOrWhiteSpace($env:SMARTSHEET_TOKEN)) {
-            Write-Host "SMARTSHEET_TOKEN is missing"
-            exit 1
-          } else {
-            Write-Host "SMARTSHEET_TOKEN is present"
-            Write-Host "Token length: $($env:SMARTSHEET_TOKEN.Length)"
-          }
 
       - name: Run script
         env:
