@@ -13,7 +13,8 @@ from datetime import datetime
 SMARTSHEET_TOKEN = os.environ["SMARTSHEET_TOKEN"] 
 SHEET_ID = 6053038855769988
 
-TEMPLATE_FILE = r"C:\Users\Frost\OneDrive\Desktop\SmartsheetsScripts\Transfer of Assets Form testing 13.pdf"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+TEMPLATE_FILE = os.path.join(BASE_DIR, "Transfer of Assets Form testing 13.pdf")
 
 MAX_LINES_PER_PAGE = 30   # increase to reduce number of pages
 
@@ -234,5 +235,6 @@ print("\n--- Summary ---")
 print("Processed:", processed)
 print("Skipped (already complete):", skipped)
 print("--- Done ---\n")
+
 
 
